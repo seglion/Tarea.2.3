@@ -2,7 +2,7 @@ const notificaciones = document.querySelector('.notificaciones');
 const boton = document.querySelector('.boton');
 const lista = document.querySelector('.lista');
 
-function mostrarNotificaciones(data) {
+function mostrarNotificacion(data) {
     notificaciones.classList.add('mostrada');
     boton.classList.add('mostrada');
     lista.innerHTML = '';
@@ -16,5 +16,5 @@ function mostrarNotificaciones(data) {
 boton.addEventListener('click', () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(mostrarNotificaciones);
+        .then(mostrarNotificacion);
 });
